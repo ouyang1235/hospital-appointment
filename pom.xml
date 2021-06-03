@@ -8,10 +8,6 @@
         <module>common/service-util</module>
         <module>model</module>
         <module>service</module>
-        <!--        <module>service</module>-->
-        <!--        <module>server-gateway</module>-->
-        <!--        <module>service-client</module>-->
-        <!--        <module>hospital-manage</module>-->
     </modules>
 
     <parent>

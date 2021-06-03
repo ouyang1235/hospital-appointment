@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/hospital-appointment.iml" filepath="$PROJECT_DIR$/.idea/hospital-appointment.iml" />
       <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service-hosp/service-hosp.iml" filepath="$PROJECT_DIR$/service/service-hosp/service-hosp.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/service-util/service-util.iml" filepath="$PROJECT_DIR$/common/service-util/service-util.iml" />
     </modules>
   </component>
