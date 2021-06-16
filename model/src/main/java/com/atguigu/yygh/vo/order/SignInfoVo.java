@@ -19,7 +19,7 @@ import java.io.Serializable;
 @Data
 @ApiModel(description = "签名信息")
 public class SignInfoVo  implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	@ApiModelProperty(value = "api基础路径")

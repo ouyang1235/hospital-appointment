@@ -14,7 +14,7 @@ import lombok.Data;
 @Data
 public class DictEeVo {
 
-	@ExcelProperty(value = "id" ,index = 0)
+	@ExcelProperty(value = "id",index = 0)
 	private Long id;
 
 	@ExcelProperty(value = "上级id" ,index = 1)

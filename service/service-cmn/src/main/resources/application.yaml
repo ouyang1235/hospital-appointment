@@ -1,0 +1,36 @@
+server:
+  port: 8202
+
+spring:
+  application:
+    name: service-cmn
+  profiles:
+    active: dev
+  #----------------数据源配置----------------#
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.96.93.223:3306/yygh_cmn?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  redis:
+    host: 39.96.93.223
+    port: 6379
+    database: 0
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+    password: 123456
+  data:
+    mongodb:
+      host: 39.96.93.223
+      port: 27017
+      database: test
