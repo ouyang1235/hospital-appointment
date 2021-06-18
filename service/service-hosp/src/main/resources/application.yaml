@@ -12,11 +12,11 @@ spring:
     url: jdbc:mysql://39.96.93.223:3306/yygh_hosp?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: root
-#  data:
-#    mongodb:
-#      host:
-#      port:
-#      database:
+  data:
+    mongodb:
+      host: 39.96.93.223
+      port: 27017
+      database: yygh_hosp
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
