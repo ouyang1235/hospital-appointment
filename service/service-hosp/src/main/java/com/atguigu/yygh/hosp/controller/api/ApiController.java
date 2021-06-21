@@ -4,8 +4,10 @@ import com.atguigu.yygh.common.helper.HttpRequestHelper;
 import com.atguigu.yygh.common.result.Result;
 import com.atguigu.yygh.hosp.service.DepartmentService;
 import com.atguigu.yygh.hosp.service.HospitalService;
+import com.atguigu.yygh.hosp.service.ScheduleService;
 import com.atguigu.yygh.model.hosp.Department;
 import com.atguigu.yygh.model.hosp.Hospital;
+import com.atguigu.yygh.model.hosp.Schedule;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ public class ApiController {
 
     @Autowired
     private DepartmentService departmentService;
+
+    @Autowired
+    private ScheduleService scheduleService;
 
 
     @RequestMapping("/saveHospital")
@@ -74,6 +79,36 @@ public class ApiController {
         departmentService.removeDepartment(map);
         return Result.ok();
     }
+
+
+    @RequestMapping("/saveSchedule")
+    @ApiOperation("上传排班")
+    public Result saveSchedule(HttpServletRequest request){
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        Map<String, Object> map = HttpRequestHelper.switchMap(parameterMap);
+        scheduleService.saveSchedule(map);
+        return Result.ok();
+    }
+
+    @RequestMapping("/schedule/list")
+    @ApiOperation("查询排班列表")
+    public Result listSchedule(HttpServletRequest request){
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        Map<String, Object> map = HttpRequestHelper.switchMap(parameterMap);
+        Page<Schedule> schedules = scheduleService.listSchedule(map);
+        return Result.ok(schedules);
+    }
+
+    @RequestMapping("/schedule/remove")
+    @ApiOperation("删除排班")
+    public Result removeSchedule(HttpServletRequest request){
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        Map<String, Object> map = HttpRequestHelper.switchMap(parameterMap);
+        scheduleService.removeSchedule(map);
+        return Result.ok();
+    }
+
+
 
 
 

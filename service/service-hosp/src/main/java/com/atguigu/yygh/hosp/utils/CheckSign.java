@@ -12,7 +12,11 @@ import java.util.Map;
 
 public class CheckSign {
 
-
+    /**
+     * 校验签名的方法
+     * @param paramsMap
+     * @param hospitalSetMapper
+     */
     public static void check(Map<String, Object> paramsMap, HospitalSetMapper hospitalSetMapper){
         //校验md5加密后的sign值
         String sign = (String)paramsMap.get("sign");

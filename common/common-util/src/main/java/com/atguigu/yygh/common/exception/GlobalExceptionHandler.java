@@ -15,13 +15,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(BusinessException.class)
     public Result handlerBusiness(BusinessException exception){
-        log.info(exception.getMessage());
+        log.info(exception.getMessage(),exception);
         return Result.build(exception.getCode(),exception.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
     public Result handlerException(Exception exception){
-        log.info(exception.getMessage());
+        log.info(exception.getMessage(),exception);
         return Result.build(500,"系统异常！请联系管理员");
     }
 
